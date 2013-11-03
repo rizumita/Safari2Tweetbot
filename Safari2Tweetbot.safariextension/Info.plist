@@ -28,7 +28,7 @@
 				<key>Identifier</key>
 				<string>tweetbot</string>
 				<key>Image</key>
-				<string>Icon-16.png</string>
+				<string>button.png</string>
 				<key>Label</key>
 				<string>Send to Tweetbot</string>
 				<key>Palette Label</key>
