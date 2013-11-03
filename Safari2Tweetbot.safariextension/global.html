@@ -9,7 +9,12 @@
                 var activeTab = safari.application.activeBrowserWindow.activeTab;
                 var title = activeTab.title;
                 var url = activeTab.url;
-                activeTab.url = 'tweetbot:///post?text=[link] ' + title + ' ' + encodeURIComponent(url);
+
+                var tweet = safari.extension.settings.tweet;
+                tweet = tweet.replace('$t', title);
+                tweet = tweet.replace('$u', encodeURIComponent(url));
+
+                activeTab.url = 'tweetbot:///post?text=' + tweet;
             }
 
             function performCommand(event) {
