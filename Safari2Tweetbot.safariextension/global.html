@@ -11,7 +11,7 @@
                 var url = activeTab.url;
 
                 var tweet = safari.extension.settings.tweet;
-                tweet = tweet.replace('$t', title);
+                tweet = tweet.replace('$t', encodeURIComponent(title));
                 tweet = tweet.replace('$u', encodeURIComponent(url));
 
                 activeTab.url = 'tweetbot:///post?text=' + tweet;
